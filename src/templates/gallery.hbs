@@ -1,0 +1,13 @@
+
+ {{#each this}}
+    <li class="gallery__item">
+<div>
+  <img src="{{this.url}}" alt="{{this.description}}" class="gallery__image" width="240" height="160" />
+</div>
+<div class="gallery__wrapper">
+  <h2>{{this.title}}</h2>
+  <p>{{this.text}}</p>
+</div>
+</li>
+  {{/each}}
+
