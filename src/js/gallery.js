@@ -5,7 +5,7 @@
 
 import { data } from "./data.js";
 import makeGallery from "../templates/gallery.hbs";
-
+import onInputChange from "./onInputChange.js"
 
 const list = document.querySelector(".gallery");
 const inputCheckbox = document.querySelector(".checkbox");
@@ -15,15 +15,15 @@ const gallery = makeGallery(data);
 list.innerHTML = gallery;
 
 
-function onInputChange() {
-  if (inputCheckbox.checked) {
-    body.classList.replace("light-theme", "dark-theme");
-    localStorage.setItem('theme', "dark-theme");
-  } else {
-    body.classList.replace("dark-theme", "light-theme");
-    localStorage.setItem('theme', "light-theme");
-  }
-}
+// function onInputChange() {
+//   if (inputCheckbox.checked) {
+//     body.classList.replace("light-theme", "dark-theme");
+//     localStorage.setItem('theme', "dark-theme");
+//   } else {
+//     body.classList.replace("dark-theme", "light-theme");
+//     localStorage.setItem('theme', "light-theme");
+//   }
+// }
 
 inputCheckbox.addEventListener("change", onInputChange);
 
